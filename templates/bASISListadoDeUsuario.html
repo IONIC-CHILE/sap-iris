@@ -1,0 +1,20 @@
+<ion-view title="BASIS -  Listado de usuario" id="page9">
+<ion-content padding="true" class="has-header">
+<a ui-sref="menu.sAPBASIS" id="bASISListadoDeUsuario-button25" class="button button-positive  button-block icon-left ion-ios-arrow-back">SAP BASIS</a>
+ 
+ <div class="list" ng-controller="usuarioCtrl">
+	<a class="item item-avatar" href="#" ng-repeat="user in usuarios">
+		<img src="img/avatar.png">
+		<h2>{{user.nombre}}</h2>
+		<p>{{user.codigo}}</p>
+	</a>
+ </div>
+
+ <ion-infinite-scroll ng-if="!noMoreItemsAvailable" 
+      on-infinite="CargarNuevosUsuarios()" 
+      distance="1%">
+ </ion-infinite-scroll>
+
+
+</ion-content>
+</ion-view>
