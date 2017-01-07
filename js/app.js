@@ -14,7 +14,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
 
 
 
-  $http.get('http://170.239.84.214/dropbox/sap/sap-iris-server/index-usuarios.php')
+  $http.get('https://test-chile.github.io/test/datos/usuarios.json')
        .success(function(result){
            $scope.usuarios = result;
 
